@@ -1,0 +1,14 @@
+<!-- app/views/reviews/_form.html.erb -->
+<%= simple_form_for [@restaurant, review], html: { class: 'form' } do |f| %>
+  <div class="form-group">
+    <%= f.label :rating %>
+    <%= f.number_field :rating, in: 0..5, step: 1, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Create Review', class: 'btn btn-primary' %>
+  </div>
+<% end %>

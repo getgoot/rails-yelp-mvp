@@ -1,0 +1,13 @@
+<!-- app/views/restaurants/index.html.erb -->
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h2><%= link_to restaurant.name, restaurant, class: 'btn btn-link' %></h2>
+      <p><strong>Address:</strong> <%= restaurant.address %></p>
+      <p><strong>Category:</strong> <%= restaurant.category %></p>
+      <p><%= restaurant.description %></p>
+    </div>
+  </div>
+<% end %>
